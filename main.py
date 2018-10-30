@@ -143,3 +143,5 @@ sim_results = run_simulation(StartingInformation.OKAY_INFORMATION, WaterType.RAN
 plot_data(sim_results)
 sim_results = run_simulation(StartingInformation.BAD_INFORMATION, WaterType.RANDOM, 30, 1000)
 plot_data(sim_results)
+
+input("Press Enter to continue...")
