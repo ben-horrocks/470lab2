@@ -101,6 +101,13 @@ def generate_probabilities(water_sources, information_type, agent):
         print("Information error")
 
 
+# Runs Bayes rule with the given agent, returning which water source it picks.
+def bayes_rule(agent, water_sources):
+    best_so_far = None
+    for source in range(len(water_sources)):
+        water_source = water_sources[source]
+                
+
 # Returns a list that contains a percentage of people who got water for each day
 def run_simulation(information_type,
                    water_type,
