@@ -1,26 +1,27 @@
 from random import randint
-import enum
+from enum import Enum
 import numpy as np
-import matplotlib
+import matplotlib.pyplot as plt
 
-class StartingInformation(enum):
+
+class StartingInformation(Enum):
     GOOD_INFORMATION = 1
     OKAY_INFORMATION = 2
     BAD_INFORMATION = 3
 
 
-class WaterType(enum):
+class WaterType(Enum):
     RANDOM = 1
     COUNTING = 2
     SET = 3
 
 
-class DecisionTypes(enum):
+class DecisionTypes(Enum):
     BAYES = 1
     INFORMATION_CASCADE = 2
 
 
-class UtilityType(enum):
+class UtilityType(Enum):
     pass
 
 
@@ -123,13 +124,22 @@ def run_simulation(information_type,
     return results
 
 
-a = []
-b = []
-for x in range(30):
-    a.append(x)
-    b.append(10)
+def plot_data(sim_data):
+    days = []
+    for x in range(1, 31):
+        days.append(x)
 
-# sim_results = run_simulation(StartingInformation.GOOD_INFORMATION, WaterType.RANDOM, 30, 1000)
-#
-# run_simulation(StartingInformation.OKAY_INFORMATION, WaterType.RANDOM, 30, 1000)
-# run_simulation(StartingInformation.BAD_INFORMATION, WaterType.RANDOM, 30, 1000)
+    plt.bar(sim_results, days, align='center', alpha=0.5)
+    plt.xticks(days)
+    plt.xlabel('Days')
+    plt.ylabel('Number of people that got water')
+    plt.title('Information Cascades')
+    plt.show()
+
+
+sim_results = run_simulation(StartingInformation.GOOD_INFORMATION, WaterType.RANDOM, 30, 1000)
+plot_data(sim_results)
+sim_results = run_simulation(StartingInformation.OKAY_INFORMATION, WaterType.RANDOM, 30, 1000)
+plot_data(sim_results)
+sim_results = run_simulation(StartingInformation.BAD_INFORMATION, WaterType.RANDOM, 30, 1000)
+plot_data(sim_results)
