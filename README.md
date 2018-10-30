@@ -1,5 +1,5 @@
 # 470lab2
-#Information Cascades in the Slums of Cape Town
+# Information Cascades in the Slums of Cape Town
 
 
 This lab can be done in groups of 2 or 3. You will submit a written report of the experiments (computer simulations) that you did and the things you found interesting. It won't be grading for grammar and style, but it should be well organized so that a reader can follow what you are saying. Your goal is to describe the models you created and the cool things you observed.
