@@ -1,10 +1,10 @@
 # 470lab2
-Information Cascades in the Slums of Cape Town
+#Information Cascades in the Slums of Cape Town
 
 
 This lab can be done in groups of 2 or 3. You will submit a written report of the experiments (computer simulations) that you did and the things you found interesting. It won't be grading for grammar and style, but it should be well organized so that a reader can follow what you are saying. Your goal is to describe the models you created and the cool things you observed.
 
-Note: The questions and prompts posed are to help you explore the problem space and reason about what approaches you can use to make an intelligent choice given the information you have.  You donít have to necessarily include answers to these questions in your report. In your report, you should consider including the following:
+Note: The questions and prompts posed are to help you explore the problem space and reason about what approaches you can use to make an intelligent choice given the information you have.  You don‚Äôt have to necessarily include answers to these questions in your report. In your report, you should consider including the following:
 
 Create some sort of program to run a lot of random computer simulations that have agents with good, not so good, and bad private information, who make choices based on Bayes equation (with and without utility)
 
@@ -35,10 +35,12 @@ Problem Model
 Suppose that there are three sources of water within walking distance for the people who live in a slum. Because of the water crisis, only one of the three sources of water works on any given day.
 
 Prompt: There are three states of the world. What are they?
+### Water source 1 has water, water source 2 has water, water source 3 has water
 
 Each morning, each household in the slum must send a slum member to fetch water from one of the water sources. Assume for model simplicity that they must choose between one of the three water sources.
 
 Prompt: There are three actions available to each household. What are they?
+### Go to water source 1, go to water source 2, go to water source 3
 
 Every household has an estimate for which water source is working on that day. For model simplicity, assume that this is represented as a probability over which water source has water that day. This is the prior probability over the states.
 
@@ -56,7 +58,7 @@ Suppose that agents make decisions sequentially, meaning that the first agent mu
 
 Prompt: What is the likelihood that agent 2 observes agent 1 going to water source i when the actual water source is at location j?
 
-As you consider this question, consider the assumption that each person probabilistically receives correct information about the state of the world.  Let q denote the probability that the private information signal they receive corresponds to the correct state of the world, and with probability 1-q, each person receives a private signal that leads them to believe in an incorrect belief about the worldís state.  The Wikipedia page on information cascades gives the likelihood probabilities for a two-state scenario (in the section ìQuantitative description.î  Youíll need to extend this to a three-state case.
+As you consider this question, consider the assumption that each person probabilistically receives correct information about the state of the world.  Let q denote the probability that the private information signal they receive corresponds to the correct state of the world, and with probability 1-q, each person receives a private signal that leads them to believe in an incorrect belief about the world‚Äôs state.  The Wikipedia page on information cascades gives the likelihood probabilities for a two-state scenario (in the section ‚ÄúQuantitative description.‚Äù  You‚Äôll need to extend this to a three-state case.
 
 Note: You may want to play around with the probability q, and consider that different agents might estimate q differently to further explore the space.
 
